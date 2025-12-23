@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Absensi Stage</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <%- include('menu') %>
+    
+    <div class="main-content">
+        <h2 class="page-title">🎙️ Absensi MeWoai Hall</h2>
+        
+        <div class="card-glass text-center p-5">
+            <h1 style="font-size: 4rem" class="mb-3">🎧</h1>
+            <h3 class="mb-4">Siap melakukan scan kehadiran?</h3>
+            <p class="text-muted mb-4">Bot akan mengecek member di channel <strong>📚│MeWoAI Hall</strong>.<br>Member yang sudah ketik <code>/izin</code> akan otomatis terdata izin.</p>
+            
+            <form action="/proses-absen" method="POST">
+                <button type="submit" class="btn btn-primary btn-lg px-5 rounded-pill">
+                    🚀 MULAI SCAN SEKARANG
+                </button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

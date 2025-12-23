@@ -1,0 +1,89 @@
+/* public/css/style.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
+
+:root {
+    --bg-dark: #0f1115;
+    --bg-panel: #181b21;
+    --accent: #00d2ff;
+    --text-main: #ffffff;
+    --text-muted: #8b9bb4;
+    --danger: #ff4757;
+    --success: #2ed573;
+    --warning: #ffa502;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+}
+
+/* SIDEBAR */
+.sidebar {
+    height: 100vh;
+    background-color: var(--bg-panel);
+    border-right: 1px solid rgba(255,255,255,0.05);
+    padding-top: 20px;
+    position: fixed;
+    width: 260px;
+}
+.brand {
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--text-main);
+    padding: 0 24px 30px;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+.brand span { color: var(--accent); }
+.nav-link {
+    color: var(--text-muted);
+    padding: 12px 24px;
+    font-weight: 500;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.nav-link:hover, .nav-link.active {
+    background: rgba(0, 210, 255, 0.1);
+    color: var(--accent);
+    border-right: 3px solid var(--accent);
+}
+
+/* CONTENT */
+.main-content {
+    margin-left: 260px;
+    padding: 40px;
+}
+.page-title { font-weight: 800; margin-bottom: 30px; }
+
+/* CARDS */
+.card-glass {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    padding: 25px;
+    backdrop-filter: blur(10px);
+    transition: 0.3s;
+}
+.card-glass:hover { transform: translateY(-5px); border-color: var(--accent); }
+
+/* STATS */
+.stat-value { font-size: 2.5rem; font-weight: 800; margin-top: 10px; }
+.stat-label { color: var(--text-muted); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; }
+
+/* FORMS & TABLES */
+.form-control, .form-select {
+    background-color: #090a0c !important;
+    border: 1px solid rgba(255,255,255,0.1) !important;
+    color: white !important;
+    padding: 12px;
+}
+.btn-primary { background-color: var(--accent); border: none; font-weight: 600; padding: 12px 24px; color: #000; }
+.btn-primary:hover { background-color: #33ddff; box-shadow: 0 0 15px rgba(0, 210, 255, 0.4); }
+
+.table-dark { background-color: transparent; }
+.table-dark td, .table-dark th { border-color: rgba(255,255,255,0.05); padding: 15px; }
